@@ -18,6 +18,7 @@ namespace UsuariosCRUD
         public static void menuPrincipal()
         {
             string opcion;
+            var gestor = new ManagmentUsuario();
 
             do
             {
@@ -31,6 +32,25 @@ namespace UsuariosCRUD
 
                 opcion = Console.ReadLine();
                 Console.WriteLine($"Elegiste: {opcion}\n");
+
+                switch (opcion)
+                {
+                    case "1":
+                        gestor.CrearUsuario();
+                        break;
+
+                    case "2":
+                        gestor.ListarUsuarios();
+                        break;
+
+                    case "3":
+                        gestor.EditarUsuario();
+                        break;
+
+                    default:
+                        Console.WriteLine("Opción no implementada.\n");
+                        break;
+                }
 
             } while (opcion != "0");
         }
