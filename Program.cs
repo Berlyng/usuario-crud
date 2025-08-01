@@ -43,6 +43,14 @@ namespace UsuariosCRUD
                         gestor.ListarUsuarios();
                         break;
 
+                    case "3":
+                        gestor.EditarUsuario();
+                        break;
+                        
+                    case "4":
+                        gestor.EliminarUsuario();
+                        break;
+
                     default:
                         Console.WriteLine("Opción no implementada.\n");
                         break;
