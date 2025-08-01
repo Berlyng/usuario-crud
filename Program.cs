@@ -58,6 +58,7 @@ namespace UsuariosCRUD
                     case "3":
                         gestor.EditarUsuario();
                         break;
+
                         
                     case "4":
                         gestor.EliminarUsuario();
